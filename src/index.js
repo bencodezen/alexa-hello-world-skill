@@ -18,6 +18,10 @@ var handlers = {
 
     'MyIntent': function () {
         this.emit(':tell', 'Hello World from Alexa');
+    },
+
+    'WhatsUpIntent': function() {
+        this.emit(':tell', 'Nothing much what\'s up with you?');
     }
 };
 
