@@ -21,7 +21,15 @@ var handlers = {
     },
 
     'AMAZON.StopIntent': function() {
-        this.emit(':tell', 'Goodbye world!');
+        var myName = '';
+
+        if (this.attributes['name']) {
+            myName = this.attributes['name'];
+        } else {
+            myName = 'Alexa user!';
+        }
+
+        this.emit(':tell', 'Goodbye ' + myName);
     },
 
     'AMAZON.CancelIntent': function() {
@@ -38,6 +46,8 @@ var handlers = {
 
     'MyNameIsIntent': function() {
         var myName = this.event.request.intent.slots.firstName.value;
+
+        this.attributes['name'] = myName;
 
         this.emit(':ask', 'hello, ' + myName, 'try again');
     }
