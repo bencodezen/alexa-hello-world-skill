@@ -3,7 +3,9 @@
     {
       "intent": "MyIntent",  "slots":[]
     },
-
+    {
+      "intent": "WhatsUpIntent"
+    },
     {
       "intent": "AMAZON.HelpIntent"
     },
