@@ -16,6 +16,18 @@ var handlers = {
         this.emit('MyIntent');
     },
 
+    'AMAZON.HelpIntent': function() {
+        this.emit(':ask', 'How can I help you?');
+    },
+
+    'AMAZON.StopIntent': function() {
+        this.emit(':tell', 'Goodbye world!');
+    },
+
+    'AMAZON.CancelIntent': function() {
+        this.emit(':tell', 'Command cancelled.');
+    },
+
     'MyIntent': function () {
         this.emit(':tell', 'Hello World from Alexa');
     },
