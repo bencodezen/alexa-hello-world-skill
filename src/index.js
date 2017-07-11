@@ -22,6 +22,12 @@ var handlers = {
 
     'WhatsUpIntent': function() {
         this.emit(':tell', 'Nothing much what\'s up with you?');
+    },
+
+    'MyNameIsIntent': function() {
+        var myName = this.event.request.intent.slots.firstName.value;
+
+        this.emit(':ask', 'hello, ' + myName, 'try again');
     }
 };
 

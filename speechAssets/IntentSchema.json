@@ -7,6 +7,15 @@
       "intent": "WhatsUpIntent"
     },
     {
+      "intent": "MyNameIsIntent",
+      "slots": [
+        {
+          "name": "firstName",
+          "type": "AMAZON.US_FIRST_NAME"
+        }
+      ]
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     },
     {
